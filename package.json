@@ -16,7 +16,7 @@
     "git-bak": "./bin/cli.js"
   },
   "scripts": {
-    "test": "jest && npm run lint",
+    "test": "npm run lint",
     "lint": "xo"
   },
   "author": "zcong1993 <1005997919@qq.com>",
