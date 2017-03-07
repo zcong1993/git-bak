@@ -1,6 +1,6 @@
 # git-bak
 
-[![NPM version](https://img.shields.io/npm/v/git-bak.svg?style=flat)](https://npmjs.com/package/git-bak) [![NPM downloads](https://img.shields.io/npm/dm/git-bak.svg?style=flat)](https://npmjs.com/package/git-bak) [![Build Status](https://img.shields.io/circleci/project/zcong1993/git-bak/master.svg?style=flat)](https://circleci.com/gh/zcong1993/git-bak) [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat)](https://github.com/zcong1993/donate)
+[![NPM version](https://img.shields.io/npm/v/git-bak.svg?style=flat)](https://npmjs.com/package/git-bak) [![NPM downloads](https://img.shields.io/npm/dm/git-bak.svg?style=flat)](https://npmjs.com/package/git-bak) [![Build Status](https://img.shields.io/circleci/project/zcong1993/git-bak/master.svg?style=flat)](https://circleci.com/gh/zcong1993/git-bak)
 
 ## Install
 
