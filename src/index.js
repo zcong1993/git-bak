@@ -1,3 +1,4 @@
+const path = require('path')
 const download = require('./download')
 const { getRepos } = require('./github')
 const gitusername = require('./git-user')
@@ -13,7 +14,7 @@ module.exports = async ({
     throw new GitBakError('dest path is required!')
   }
   const repos = await getRepos(username, page, perPage)
-  const jobs = Array.from(repos, repo => download(repo.full_name, dest + '/' + repo.name))
+  const jobs = Array.from(repos, repo => download(repo.full_name, path.resolve(process.cwd(), dest, repo.name)))
 
   return Promise.all(jobs)
 }
