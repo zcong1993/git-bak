@@ -2,20 +2,68 @@
 
 [![NPM version](https://img.shields.io/npm/v/git-bak.svg?style=flat)](https://npmjs.com/package/git-bak) [![NPM downloads](https://img.shields.io/npm/dm/git-bak.svg?style=flat)](https://npmjs.com/package/git-bak) [![Build Status](https://img.shields.io/circleci/project/zcong1993/git-bak/master.svg?style=flat)](https://circleci.com/gh/zcong1993/git-bak)
 
+> Easy way to backup your repos
+
 ## Install
 
 ```bash
-yarn add git-bak
+$ yarn global add git-bak
 ```
 
 ## Usage
 
-```js
-const gitBak = require('git-bak')
-
-gitBak()
-//=> foo
+```bash
+$ git-bak <username> [options]
+# or use alias `gbk`
+# example, backup all your repos
+$ git-bak zcong1993 --dest bakfolder --all
 ```
+
+## Input
+
+### username
+type: string
+
+default: the git username in your git global config
+
+the github username you want to backup
+
+## Options
+
+### --dest
+type: string, **required**
+
+default: null
+
+the folder you want to backup repos to
+
+### --all
+type: bool
+
+default: false
+
+if backup all repos of the user
+
+### --skip-fork
+type: bool
+
+default: false
+
+if skip the repos forked from other
+
+### --page
+type: number
+
+default: 2
+
+the page arg for github api
+
+### --per-page
+type: number
+
+default: 1
+
+the per_page arg for github api
 
 ## Contributing
 

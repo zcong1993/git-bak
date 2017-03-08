@@ -8,12 +8,21 @@ module.exports = async ({
   username = gitusername,
   dest,
   page,
-  perPage
+  perPage,
+  all,
+  skipFork
 } = {}) => {
   if (!dest) {
     throw new GitBakError('dest path is required!')
   }
-  const repos = await getRepos(username, page, perPage)
+  if (all) {
+    perPage = 10000
+    page = 1
+  }
+  let repos = await getRepos({ username, page, perPage })
+  if (skipFork) {
+    repos = repos.filter(repo => !repo.fork)
+  }
   const jobs = Array.from(repos, repo => download(repo.full_name, path.resolve(process.cwd(), dest, repo.name)))
 
   return Promise.all(jobs)

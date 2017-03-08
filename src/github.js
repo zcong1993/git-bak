@@ -2,7 +2,11 @@ const axios = require('axios')
 const GitBakError = require('./git-bak-error')
 const event = require('./event')
 
-exports.getRepos = async (username, page = 2, perPage = 1) => {
+exports.getRepos = async ({
+  username,
+  page = 2,
+  perPage = 1
+}) => {
   let repos = []
   event.emit('status', 'get repos list...')
   try {
