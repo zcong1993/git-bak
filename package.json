@@ -43,6 +43,10 @@
     "git-config-path": "^1.0.1",
     "meow": "^3.7.0",
     "ora": "^1.1.0",
-    "parse-git-config": "^1.1.1"
+    "parse-git-config": "^1.1.1",
+    "update-notifier": "^2.1.0"
+  },
+  "engines": {
+    "node": ">= 7.6.0"
   }
 }

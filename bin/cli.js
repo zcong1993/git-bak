@@ -2,9 +2,11 @@
 const ora = require('ora')
 const meow = require('meow')
 const chalk = require('chalk')
+const update = require('update-notifier')
 const event = require('../src/event')
 const bak = require('../src')
 const errorHandler = require('../src/error-handler')
+const pkg = require('../package.json')
 
 const blue = chalk.blue
 const bold = chalk.bold
@@ -50,6 +52,8 @@ event.on('download', repo => {
 event.on('error', msg => spinner.fail(msg))
 
 const opts = input[0] ? Object.assign({ username: input[0] }, flags) : flags
+
+update({ pkg }).notify()
 
 bak(opts)
   .then(() => {
